@@ -178,6 +178,7 @@ public class TF2 extends JavaPlugin {
         pm.registerEvents(new EntityShootBowListener(), this);
         pm.registerEvents(new InventoryClickListener(this), this);
         pm.registerEvents(new PlayerRespawnListener(), this);
+        pm.registerEvents(new PlayerCombustByPlayerListener(), this);
     }
 
     public Map getMap(String map) {

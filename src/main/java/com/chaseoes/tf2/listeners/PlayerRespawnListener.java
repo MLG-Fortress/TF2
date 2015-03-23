@@ -1,6 +1,7 @@
 package com.chaseoes.tf2.listeners;
 
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
@@ -9,7 +10,7 @@ import com.chaseoes.tf2.classes.TF2Class;
 
 public class PlayerRespawnListener implements Listener {
 
-    @EventHandler
+	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
     public void onPlayerRespawn(final PlayerRespawnEvent event) {
         final GamePlayer gp = GameUtilities.getUtilities().getGamePlayer(event.getPlayer());
         Game game = gp.getGame();
@@ -20,5 +21,6 @@ public class PlayerRespawnListener implements Listener {
         event.setRespawnLocation(MapUtilities.getUtilities().loadTeamSpawn(map.getName(), gp.getTeam()));
         TF2Class c = gp.getCurrentClass();
         c.apply(gp);
+        event.getPlayer().setHealth(event.getPlayer().getMaxHealth());      
     }
 }

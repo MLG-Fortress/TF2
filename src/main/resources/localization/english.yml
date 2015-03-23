@@ -13,8 +13,14 @@ HELP-LEAVE: '&b/tf2 leave&7: Leave the current game.'
 HELP-LIST: '&b/tf2 list [map]&7: List players currently in the game.'
 HELP-START: '&c/tf2 start [map]&7: Forces a map to start instead of starting automatically.'
 HELP-STOP: '&c/tf2 stop [map]&7: Forces a map to stop.'
-HELP-CREATE: '&4Please go here for a full list of map setup commands:'
-
+HELP-CREATE: "&4/tf2 create <option>: Do '/tf2 help create' for more info."
+HELP-CREATE2: '&cDo /tf2 help create <option> for expanded help. <option = MAP|REDEFINE|CLASSBUTTON|CHANGECLASSBUTTON|REFILLCONTAINER|CLASSCHEST>'
+TF2-HELP-CREATE-MAP: '&c/tf2 create map <map name>: Creates a new map with the specified map name. A WorldEdit selection around the map is required.' 
+TF2-HELP-CREATE-REDEFINE: '&c/tf2 redefine map <map name>: Used to redefine the selection used when creating a map. A WorldEdit selection is required.'
+TF2-HELP-CREATE-CLASSBUTTON: '&c/tf2 create classbutton <normal|donator> <class name>: Gives you a button, which when placed, will become a class button for the specified class. The tf2.button.normal permission is required to use a normal class button, and the tf2.button.donator permission is required to use a donator class button.'
+TF2-HELP-CREATE-CHANGECLASSBUTTON: "&c/tf2 create changeclassbutton: Gives you a button, which when placed, will become a change class button, which allows players to go back to their team's lobby and choose a new class."
+TF2-HELP-CREATE-REFILLCONTAINER: '&c/tf2 create refillcontainer: Allows you to select a container (a chest, dispenser, etc. - anything with an inventory) to be refilled every time a game starts.'
+TF2-HELP-CREATE-CLASSCHEST: '&c/tf2 create classchest <className>: Do this while looking at a chest that contains the weapons and armor of the class you would like to define. <className> is the name of the class you are defining. Any permissions for these classes will default to tf2.class.<className>. Place any armor in the bottom right slots of the chest in the order of wear, left to right, starting with helmet.'
 PERCENT-JOIN: The game will start when {percent}% of players have joined.
 
 BUTTON-CHANGE-CLASS-CREATE: Place the button to create a changeclass button.

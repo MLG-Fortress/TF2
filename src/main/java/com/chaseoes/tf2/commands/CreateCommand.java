@@ -34,7 +34,7 @@ public class CreateCommand {
     public void execCreateCommand(CommandSender cs, String[] strings, Command cmnd) {
         CommandHelper h = new CommandHelper(cs, cmnd);
         if (strings.length == 1) {
-            h.wrongArgs("/tf2 create <map|classbutton|changeclassbutton|refillcontainer>");
+            h.wrongArgs("/tf2 create <map|classbutton|changeclassbutton|refillcontainer|classchest>");
         } else if (strings[1].equalsIgnoreCase("map")) {
             if (strings.length == 3) {
                 Player p = (Player) cs;

@@ -3,6 +3,7 @@ package com.chaseoes.tf2;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.scoreboard.DisplaySlot;
+import org.bukkit.scoreboard.NameTagVisibility;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
 import org.bukkit.scoreboard.Scoreboard;
@@ -29,6 +30,8 @@ public class GameScoreboard {
         board = manager.getNewScoreboard();
         red = board.registerNewTeam(com.chaseoes.tf2.Team.RED.getName());
         blue = board.registerNewTeam(com.chaseoes.tf2.Team.BLUE.getName());
+        red.setNameTagVisibility(NameTagVisibility.HIDE_FOR_OTHER_TEAMS);
+        blue.setNameTagVisibility(NameTagVisibility.HIDE_FOR_OTHER_TEAMS);
         red.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + com.chaseoes.tf2.Team.RED.getName());
         blue.setDisplayName(ChatColor.BLUE + "" + ChatColor.BOLD + com.chaseoes.tf2.Team.BLUE.getName());
         red.setCanSeeFriendlyInvisibles(true);

@@ -77,7 +77,14 @@ public class Localizer {
     public final I18N HELP_START = new I18N(this, "HELP-START");
     public final I18N HELP_STOP = new I18N(this, "HELP-STOP");
     public final I18N HELP_CREATE = new I18N(this, "HELP-CREATE");
-
+    public final I18N HELP_CREATE2 = new I18N(this, "HELP-CREATE2");
+    public final I18N TF2_HELP_CREATE_MAP = new I18N(this, "TF2-HELP-CREATE-MAP");
+    public final I18N TF2_HELP_CREATE_REDEFINE = new I18N(this, "TF2-HELP-CREATE-REDEFINE");
+    public final I18N TF2_HELP_CREATE_CLASSBUTTON = new I18N(this, "TF2-HELP-CREATE-CLASSBUTTON");
+    public final I18N TF2_HELP_CREATE_CHANGECLASSBUTTON = new I18N(this, "TF2-HELP-CREATE-CHANGECLASSBUTTON");
+    public final I18N TF2_HELP_CREATE_REFILLCONTAINER = new I18N(this, "TF2-HELP-CREATE-REFILLCONTAINER");
+    public final I18N TF2_HELP_CREATE_CLASSCHEST = new I18N(this, "TF2-HELP-CREATE-CLASSCHEST");
+   
     public final I18N PLAYER_LEAVE_GAME = new I18N(this, "PLAYER-LEAVE-GAME");
     public final I18N PLAYER_NOT_PLAYING = new I18N(this, "PLAYER-LEAVE-GAME");
     public final I18N PLAYER_JOIN_MAP = new I18N(this, "PLAYER-JOIN-MAP", new StringReplacer("map"));

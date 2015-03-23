@@ -9,13 +9,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 
 import com.chaseoes.tf2.Game;
 import com.chaseoes.tf2.GamePlayer;
 import com.chaseoes.tf2.GameStatus;
 import com.chaseoes.tf2.GameUtilities;
-import com.chaseoes.tf2.TF2;
-import com.chaseoes.tf2.events.TF2DeathEvent;
 import com.chaseoes.tf2.utilities.LocationStore;
 
 public class PlayerDamageByEntityListener implements Listener {
@@ -70,6 +69,14 @@ public class PlayerDamageByEntityListener implements Listener {
                         return;
                     }
                     if (gdamaged.getTeam() == gdamager.getTeam()) {
+                        if (event.getCause() == DamageCause.FIRE_TICK || event.getCause() == DamageCause.FIRE) {
+                    	    event.setDamage(0);
+                    	    event.getEntity().setFireTicks(0);
+                    	}
+                        if (event.getCause() == DamageCause.BLOCK_EXPLOSION)
+                        {
+                        	event.setDamage(0);
+                        }
                         event.setCancelled(true);
                         return;
                     }
@@ -119,5 +126,4 @@ public class PlayerDamageByEntityListener implements Listener {
             }
         }
     }
-
 }

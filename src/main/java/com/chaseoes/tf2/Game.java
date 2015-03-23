@@ -228,11 +228,11 @@ public class Game {
             Localizers.getDefaultLoc().GAME_WIN.broadcast(te, ChatColor.BOLD + map.getName() + ChatColor.RESET + "" + ChatColor.YELLOW);
         }
         stopMatch(true);
-
+        Player[] playerList = TF2.getInstance().getServer().getOnlinePlayers().toArray (new Player[TF2.getInstance().getServer().getOnlinePlayers().size ()]);
         if (team == Team.RED) {
-            GeneralUtilities.runCommands("on-red-win", TF2.getInstance().getServer().getOnlinePlayers()[0], TF2.getInstance().getServer().getOnlinePlayers()[0], getMap());
+            GeneralUtilities.runCommands("on-red-win", playerList[0], playerList[0], getMap());
         } else {
-            GeneralUtilities.runCommands("on-blue-win", TF2.getInstance().getServer().getOnlinePlayers()[0], TF2.getInstance().getServer().getOnlinePlayers()[0], getMap());
+            GeneralUtilities.runCommands("on-blue-win", playerList[0], playerList[0], getMap());
         }
     }
 

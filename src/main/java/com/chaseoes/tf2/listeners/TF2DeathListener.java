@@ -7,6 +7,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 import com.chaseoes.tf2.Game;
@@ -20,7 +21,7 @@ import com.chaseoes.tf2.events.TF2DeathEvent;
 
 public class TF2DeathListener implements Listener {
 
-    @EventHandler
+	@EventHandler(ignoreCancelled = true, priority = EventPriority.HIGH)
     public void onDeath(final TF2DeathEvent event) {
         TF2.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(TF2.getInstance(), new Runnable() {
             @Override

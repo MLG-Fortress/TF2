@@ -4,7 +4,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
-
 import com.chaseoes.tf2.GamePlayer;
 import com.chaseoes.tf2.GameStatus;
 import com.chaseoes.tf2.GameUtilities;

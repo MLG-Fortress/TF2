@@ -25,6 +25,41 @@ public class CommandManager implements CommandExecutor {
             HelpCommand.getCommand().execHelpCommand(cs, strings, cmnd);
             return true;
         }
+        
+        if (strings[0].equalsIgnoreCase("help create")) {
+            HelpCreateCommand.getCommand().execHelpCreateCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create map")) {
+            HelpCreateMapCommand.getCommand().execHelpCreateMapCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create redefine")) {
+            HelpCreateRedefineCommand.getCommand().execHelpCreateRedefineCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create classbutton")) {
+        	HelpCreateClassbuttonCommand.getCommand().execHelpCreateClassbuttonCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create changeclassbutton")) {
+        	HelpCreateChangeclassbuttonCommand.getCommand().execHelpCreateChangeclassbuttonCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create refillcontainer")) {
+        	HelpCreateRefillcontainerCommand.getCommand().execHelpCreateRefillcontainerCommand(cs, strings, cmnd);
+            return true;
+        }
+        
+        if (strings[0].equalsIgnoreCase("help create classchest")) {
+        	HelpCreateClasschestCommand.getCommand().execHelpCreateClasschestCommand(cs, strings, cmnd);
+            return true;
+        }
 
         if (strings[0].equalsIgnoreCase("checkdata")) {
             if (cs.hasPermission("tf2.create")) {
