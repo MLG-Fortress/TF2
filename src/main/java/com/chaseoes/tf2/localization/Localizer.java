@@ -199,7 +199,7 @@ public class Localizer {
             file.createNewFile();
         }
         config.loadFromString(Files.toString(file, Charset.forName("UTF-8")));
-        InputStream in = TF2.getInstance().getResource("localization/" + localization);
+        InputStreamReader in = new InputStreamReader(TF2.getInstance().getResource("localization/" + localization));
         if (in != null) {
             YamlConfiguration def = new YamlConfiguration();
             def.load(in);
